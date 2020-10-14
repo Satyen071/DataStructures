@@ -1,0 +1,27 @@
+package ImplementLinkedList;
+
+import java.util.HashMap;
+
+public class TestCountWords {
+
+	public static void main(String[] args) {
+		String str="“a fox is clever than the cat and a cat is clever than the dog, jackal and goat";
+	     HashMap<String, Integer> res = new HashMap<String, Integer>();
+	     
+	     String el [] = str.split("\\s+");
+	     for (String s : el) {
+	         int count = 0;
+	         if (res.containsKey(s)) {
+	             count = res.get(s);
+	         }
+	         res.put(s, count + 1);
+	     }
+	     
+	     // output
+	     for (String keys : res.keySet()) {
+	         System.out.printf("%s : %d%n", keys, res.get(keys));
+	     }
+
+	}
+
+}

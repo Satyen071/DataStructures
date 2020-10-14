@@ -1,0 +1,40 @@
+package ImplementLinkedList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int[] arr = {198, 34, 3, 97, 9, 76, 45, 8};
+		int[] result  = new int[20];
+		int num ;
+		int j=0;
+		for(int i=0;i<arr.length-1;i++) {
+			num = arr[i];
+			
+		while(num>0) {
+			 int d = num%10;
+			 num = num/10;
+			 result[j] = d;
+			 j++;
+			}
+		}
+		int first =result[0];
+		int second = Integer.MIN_VALUE;
+		int third = Integer.MIN_VALUE;
+		for(int k=1;k<result.length;k++) {
+			if (arr[k] > first) 
+	            first = arr[k]; 
+		}
+		for(int k=0;k<result.length;k++) {
+			if (arr[k] <= first&&arr[k]>second) 
+	            second = arr[k]; 
+		}
+		
+		for(int k=0;k<result.length;k++) {
+			if (arr[k]<=second&&arr[k]>third) 
+	            third = arr[k]; 
+		}
+		System.out.print(first+" "+second+" "+third);
+
+	}
+
+}
