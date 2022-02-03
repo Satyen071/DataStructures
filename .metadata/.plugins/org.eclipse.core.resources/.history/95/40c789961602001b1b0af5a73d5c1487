@@ -1,0 +1,26 @@
+package ImplementLinkedList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int[] arr = {198, 34, 3, 97, 9, 76, 45, 8};
+		int[] result  = new int[20];
+		int num ;
+		for(int i=0;i<arr.length;i++) {
+			num = arr[i];
+			int j=0;
+		while(num>0) {
+			 int d = num%10;
+			 num = num/10;
+			 result[j] = d;
+			 j++;
+		}
+		}
+		
+		for(int k=0;k<result.length;k++) {
+			System.out.println(result[k]);
+		}
+
+	}
+
+}
