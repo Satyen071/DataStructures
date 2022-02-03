@@ -27,7 +27,7 @@ class ElementSearchSortedRotatedArray {
         return binarySearch(arr, pivot + 1, n - 1, key);
     }
 
- 
+
     static int findPivot(int arr[], int low, int high)
     {
         // base cases
